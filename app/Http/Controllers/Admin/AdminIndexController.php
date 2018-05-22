@@ -38,7 +38,10 @@ class AdminIndexController extends  BaseController
      * 后台-文章分类列表
      * */
     public function index(){
-
+        var_dump(config('session.cookie'));
+        session_start();
+        session(['12'=>'nnnkkkkk']);
+        dd($this->request->session()->all());
         //参数部分
         $search_params = $this->request->all();
         $page = $this->request->get('page', 1);
