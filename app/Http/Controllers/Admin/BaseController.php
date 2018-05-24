@@ -3,7 +3,6 @@
  * Created by Engineer CuiLiwu.
  * Project: deal.
  * Date: 2018/5/22-10:40
- * License Hangzhou orce Technology Co., Ltd. Copyright © 2018
  */
 namespace App\Http\Controllers\Admin;
 

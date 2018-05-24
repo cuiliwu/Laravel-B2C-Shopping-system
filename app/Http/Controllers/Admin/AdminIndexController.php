@@ -4,7 +4,6 @@
  * Created by Engineer CuiLiwu.
  * Project: deal.
  * Date: 2018/5/17-11:22
- * License Hangzhou orce Technology Co., Ltd. Copyright © 2018
  */
 
 namespace App\Http\Controllers\Admin;
@@ -14,20 +13,6 @@ use Illuminate\Http\Request;
 
 class AdminIndexController extends  BaseController
 {
-    /**
-     * 后台首页
-     *
-     * */
-    protected $api_url = [
-        'index' => ['get', 'user'],
-        'show'  => ['get', 'article/category/%d'],
-        'store' => ['post', 'article/category'],
-        'update'=> ['put', 'article/category/%d'],
-
-        'delete'=> ['delete', 'article/category/%d'],
-        'setShow'=> ['post', 'article/category/%d'],
-    ];
-
     protected $request;
 
     public function __construct(Request $request)
@@ -38,10 +23,6 @@ class AdminIndexController extends  BaseController
      * 后台-文章分类列表
      * */
     public function index(){
-        var_dump(config('session.cookie'));
-        session_start();
-        session(['12'=>'nnnkkkkk']);
-        dd($this->request->session()->all());
         //参数部分
         $search_params = $this->request->all();
         $page = $this->request->get('page', 1);
