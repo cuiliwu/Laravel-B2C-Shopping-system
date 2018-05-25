@@ -23,24 +23,6 @@ class AdminIndexController extends  BaseController
      * 后台-文章分类列表
      * */
     public function index(){
-        //参数部分
-        $search_params = $this->request->all();
-        $page = $this->request->get('page', 1);
-        $params = [
-            'search' => search_params($search_params),
-            'searchJoin' => 'and',
-            'orderBy'=>'id',
-            'sortedBy'=>'asc',
-            'page' => $page,
-        ];
-
-        //请求部分
-        $ret = http_admin($this->api_url['index'])->send($params);
-        //dd($ret);
-        //结果处理部分
-        $this->httpCodeJudge($ret);
-        $data = paginate($this->request, $ret['data']);
-
         return view('Admin.index');
     }
     /**

@@ -33,6 +33,7 @@ class AuthController extends  BaseController
      * 执行登录
      * */
     public function dologin(){
+        dd(123);
         $this->validate($this->request,['email' => 'required','password' => 'required'],[
             'email.required' => '账号不为空',
             'password.required' => '密码不为空',
