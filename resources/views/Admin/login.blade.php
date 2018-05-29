@@ -31,7 +31,7 @@
                         <input type="email" name="email" class="form-control" placeholder="Username" required="required">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+                        <input type="password" name="password" class="form-control" placeholder="Password" required="required" autocomplete="off">
                     </div>
                     <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
                 </form>
@@ -46,24 +46,19 @@
         <script src="{{asset('js/jquery-2.1.1.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
         <script>
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $("Form").submit(function(e){
-                e.preventDefault();
-                var data = $("Form").serialize();
-                console.log(data);
-                $.ajax({
-                    url: '{{ route('admin.dologin') }}',
-                    type: 'post',
-                    dataType: 'json',
-                    success: function (data) {
-                        console.log(data);
-                    }
-                });
-            });
+            {{--$("Form").submit(function(e){--}}
+                {{--e.preventDefault();--}}
+                {{--var data = $("Form").serialize();--}}
+                {{--console.log(data);--}}
+                {{--$.ajax({--}}
+                    {{--url: '{{ route('admin.dologin') }}',--}}
+                    {{--type: 'post',--}}
+                    {{--dataType: 'json',--}}
+                    {{--success: function (data) {--}}
+                        {{--console.log(data);--}}
+                    {{--}--}}
+                {{--});--}}
+            {{--});--}}
         </script>
     </body>
 </html>

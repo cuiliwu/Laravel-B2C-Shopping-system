@@ -167,7 +167,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', '*.shop.com'),
+    'domain' => env('SESSION_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
