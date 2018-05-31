@@ -33,6 +33,7 @@ class AuthController extends  BaseController
      * 执行登录
      * */
     public function dologin(){
+        session(['admin_user_id'=>1]);
         return redirect()->to('/Kawhi');
     }
     /**
