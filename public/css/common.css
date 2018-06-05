@@ -1,0 +1,102 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.fr10{
+    float: right;
+    margin-right: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.mb5{
+    margin-bottom: 5px;
+}
+.center{
+    text-align: center;
+}
+.g-input{
+    width: 50px;
+    text-align: center;
+}
+.c_yellow{
+    color: #f9d108;
+}
+.form-group .align_left{
+    text-align: left;
+}
+#picture a{
+    font-size: 22px;
+    margin: 5px 5px 0 0;
+}
+#picture .glyphicon-star-empty{
+    color: #999;
+}
+#picture .glyphicon-star{
+    color: #f9d108;
+}
+#labelimg{
+    width: 100px;
+}
+#editLabelimg{
+    width: 100px;
+}
+.col-zdlg-2-5{
+    float: left;
+    width:20%;
+    line-height: 35px;
+    font-size: 16px;
+}
+.col-zdlg-2-5.dq{
+    color: red;
+}
+.input-group .selecth30{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    width: 160px;
+}
+
+.mrd10{
+	margin-right: 10px;
+	display: inline-block;
+}
+.radiolist label{
+    margin-right: 10px;
+    padding-top: 7px;
+}
+.radiolist label input{
+    margin: -5px 5px 0 0;
+    vertical-align: middle;
+}
+.banner_box{
+    position: relative;
+}
+.img_del{
+    position: absolute;
+    right: -40px;
+    top: 40px;
+}
+.i-checks font{
+    font-weight: bold;
+    margin-right: 15px;
+}
+.checkboxlist{
+    display: inline-block;
+}
+#qt_list{
+    float: left;
+    margin-top: 20px;
+}
+#qt_list li{
+    float: left;
+    list-style-type:none
+}
+.checkbox_create input[type="checkbox"]{
+    width: 15px;
+}

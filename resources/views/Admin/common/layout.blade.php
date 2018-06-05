@@ -8,17 +8,58 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>INSPINIA | Dashboard</title>
+    <title>BLOG</title>
     @yield('head')
     @yield('before.css')
 
-    @include('Admin.common.header')
 </head>
-{{--@include('Admin.common.menu')--}}
-
 <div id="wrapper">
-@include('Admin.common.menu')
-@yield('content')
+    @include('Admin.common.header')
+    @include('Admin.common.menu')
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="chat_view.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>{{array_get($bread,'second_level')}}</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/Kawhi">Home</a>
+                    </li>
+                    <li>
+                        <a>{{array_get($bread,'first_level')}}</a>
+                    </li>
+                    <li class="active">
+                        <strong>{{array_get($bread,'second_level')}}</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="/js/plugins/layer/layer.min.js"></script>
 <script src="/js/plugins/validate/jquery.validate.min.js"></script>

@@ -29,5 +29,7 @@ Route::group([],function () {
 
 Route::group(['middleware' =>  ['adminAuthenticate']], function () {
     Route::get('/','AdminIndexController@index','admin.index');
-    // Route::resource();
+    Route::group(['namespace' =>  'User'], function () {
+        Route::resource('user','UserController');
+    });
 });
