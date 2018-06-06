@@ -33,16 +33,16 @@
 
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-10">
-                <h2>{{array_get($bread,'second_level')}}</h2>
+                <h2></h2>
                 <ol class="breadcrumb">
-                    <li>
+                    <li class="">
                         <a href="/Kawhi">Home</a>
                     </li>
-                    <li>
-                        <a>{{array_get($bread,'first_level')}}</a>
+                    <li class="">
+                        <a></a>
                     </li>
-                    <li class="active">
-                        <strong>{{array_get($bread,'second_level')}}</strong>
+                    <li class="">
+                        <strong></strong>
                     </li>
                 </ol>
             </div>

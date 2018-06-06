@@ -29,7 +29,17 @@ Route::group([],function () {
 
 Route::group(['middleware' =>  ['adminAuthenticate']], function () {
     Route::get('/','AdminIndexController@index','admin.index');
+
+    // 用户管理
     Route::group(['namespace' =>  'User'], function () {
+        // 后台用户管理
         Route::resource('user','UserController');
+    });
+
+    Route::group(['namespace' =>  'Product','prefix'=>'product'], function () {
+        Route::resource('cate','CategoryController');
+        Route::resource('spec','SpecController');
+        Route::resource('attribute','AttributeController');
+        Route::resource('product','ProductController');
     });
 });

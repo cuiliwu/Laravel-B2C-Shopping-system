@@ -2,16 +2,16 @@
 /**
  * Created by Engineer CuiLiwu.
  * Project: deal.
- * Date: 2018/6/5-15:19
+ * Date: 2018/6/6-9:10
  * License Hangzhou orce Technology Co., Ltd. Copyright © 2018
  */
 
-namespace App\Http\Controllers\Admin\User;
+namespace App\Http\Controllers\Admin\Product;
 
 use App\Http\Controllers\Admin\BaseController;
 use Illuminate\Http\Request;
 
-class UserController extends  BaseController
+class CategoryController extends  BaseController
 {
     protected $request;
 
@@ -20,10 +20,9 @@ class UserController extends  BaseController
         $this->request = $request;
     }
     /**
-     * 后台-用户列表
+     * 分类列表
      * */
     public function index(){
-        return view('Admin.User.index',['bread'=>['first_level'=>'用户管理','second_level'=>'后台用户列表','third_level'=>'用户列表']]);
+        return view('Admin.Product.index',['bread'=>['first_level'=>'商品管理','second_level'=>'分类管理']]);
     }
-
 }

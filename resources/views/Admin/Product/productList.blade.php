@@ -8,7 +8,7 @@
 
 
         <div class="ibox-content">
-            用户管理列表。
+            商品管理列表。
         </div>
     </div>
 @endsection
