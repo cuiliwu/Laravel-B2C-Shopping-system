@@ -10,14 +10,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>BLOG</title>
     @yield('head')
+    @include('Admin.common.header')
     @yield('before.css')
 
 </head>
-<div id="wrapper">
-    @include('Admin.common.header')
+
+<body class="gray-bg">
+<div id="wrapper" style="height: 100%;">
     @include('Admin.common.menu')
 
-    <div id="page-wrapper" class="gray-bg">
+    <div id="page-wrapper" class="gray-bg" style="height:inherit;">
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
@@ -36,13 +38,13 @@
                 <h2></h2>
                 <ol class="breadcrumb">
                     <li class="">
-                        <a href="/Kawhi">Home</a>
+                        <a href="/Kawhi" class="nav-label"></a>
                     </li>
                     <li class="">
-                        <a></a>
+                        <a class="second-label"></a>
                     </li>
                     <li class="">
-                        <strong></strong>
+                        <strong class="third-label"></strong>
                     </li>
                 </ol>
             </div>
@@ -50,7 +52,6 @@
 
             </div>
         </div>
-
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
@@ -90,7 +91,6 @@
 
 </script>
 @yield('after.js')
-<body class="gray-bg">
 
 @include('Admin.common.footer')
 @yield('foot')

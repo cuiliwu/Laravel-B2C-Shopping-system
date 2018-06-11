@@ -429,8 +429,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
     <div class="small-chat-box fadeInRight animated">
 
         <div class="heading" draggable="true">
