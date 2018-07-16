@@ -1,7 +1,7 @@
 <?php
     namespace App\Http\Controllers;
     use App\Cmscontents;
-    class IndexController extends BaseController{
+    class ChannelController extends BaseController{
         public function index(){
             return Cmscontents::getContent();
         }

@@ -1,4 +1,4 @@
-<nav class="navbar-default navbar-static-side" role="navigation" style="width: 220px;float: left;">
+<nav class="navbar-default navbar-static-side" role="navigation" style="width: 220px;float: left;height: inherit;background-color: #2f4050;">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
@@ -19,7 +19,7 @@
                         <li><a href="contacts.html">Contacts</a></li>
                         <li><a href="mailbox.html">Mailbox</a></li>
                         <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li>
+                        <li><a href="{{asset('/Kawhi/logout')}}">Logout</a></li>
                     </ul>
                 </div>
                 <div class="logo-element">

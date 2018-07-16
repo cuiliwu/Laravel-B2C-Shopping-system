@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>INSPINIA | Login</title>
+        <title>BCshop | Login</title>
 
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('font-awesome/css/font-awesome.css')}}" rel="stylesheet">
@@ -16,9 +16,9 @@
         <div class="middle-box text-center loginscreen animated fadeInDown">
             <div>
                 <div>
-                    <h1 class="logo-name">CUI+</h1>
+                    <h1 class="logo-name">SHOP+</h1>
                 </div>
-                <h3>Welcome to CUI+</h3>
+                <h3>Welcome to BCSHOP+</h3>
                 <p>
 
                 </p>

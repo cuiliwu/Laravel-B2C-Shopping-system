@@ -12,4 +12,5 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 interface AdminUserRepository extends RepositoryInterface
 {
     //
+    public function checkLoginUser($info);
 }

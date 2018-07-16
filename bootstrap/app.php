@@ -43,6 +43,23 @@ $app->singleton(
 
 /*
 |--------------------------------------------------------------------------
+| Register Service Providers
+|--------------------------------------------------------------------------
+|
+| Here we will register all of the application's service providers which
+| are used to bind services into the container. Service providers are
+| totally optional, so you are not required to uncomment this line.
+|
+*/
+
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(\App\Providers\RouteServiceProvider::class);
+$app->register(\App\Providers\RepositoryServiceProvider::class);
+$app->register(App\Providers\EventServiceProvider::class);
+//$app->register(Illuminate\Redis\RedisServiceProvider::class);
+
+/*
+|--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------
 |
