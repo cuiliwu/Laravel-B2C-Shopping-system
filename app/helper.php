@@ -103,8 +103,12 @@ if (!function_exists('search_params')) {
 if (!function_exists('paginate')) {
     function paginate(\Illuminate\Http\Request $request, $data)
     {
+        $return = [];
         if (!isset($data['page'])) {
-            $data['page'] = [];
+            $data['page'] = [
+                'total_pages'=>$data['total'],
+                'current_page'=>$data['current_page']
+            ];
         }
         $page = $data['page'];
 
@@ -151,7 +155,8 @@ if (!function_exists('paginate')) {
             }
         }
 
-        $data['page']['links'] = [
+        $return['page']['total_pages'] = $page['total_pages'];
+        $return['page']['links'] = [
             'first_page' => $first_page,
             'last_page' => $last_page,
             'prev_page' => $prev_page,
@@ -159,8 +164,8 @@ if (!function_exists('paginate')) {
             'list_page' => $list_page,
             'url_template' => $url_template
         ];
-
-        return $data;
+        $return['data'] = $data['data'];
+        return $return;
     }
 }
 

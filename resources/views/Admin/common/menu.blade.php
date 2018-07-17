@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{asset('/Kawhi/user/permission')}}" class="second-label">前台用户管理<span class="fa arrow"></span></a>
+                        <a href="#" class="second-label">前台用户管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li>
                                 <a href="#" class="third-label">用户列表2</a>
@@ -48,7 +48,7 @@
                 </ul>
             </li>
             <li>
-                <a href="/Kawhi"><i class="fa fa-desktop"></i> <span class="nav-label">商品管理</span> <span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">商品管理</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li>
                         <a href="{{asset('/Kawhi/product/cate')}}"  class="second-label" >分类管理</a>
