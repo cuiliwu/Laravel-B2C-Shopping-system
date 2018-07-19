@@ -51,16 +51,57 @@ class UserController extends  BaseController
     }
     public function create(){
         return view('Admin.User.create');
-        dd('create');
     }
-    public function edit(){
-        dd('edit');
+    public function edit($id){
+        $ret  = $this->adminUser->find($id)->toArray();
+        old_set($ret);
+        return view('Admin.User.edit',['type'=>'PUT']);
+    }
+    public function update($id)
+    {
+        $data = $this->form();
+        unset($data['password']);
+        $ret  = $this->adminUser->update($data,$id);
+        return redirect('/Kawhi/user');
     }
     public function store(){
-        dd('store');
+        $data = $this->form();
+
+        $ret = $this->adminUser->updateOrCreate($data);
+
+        return redirect('/Kawhi/user');
     }
-    public function delete(){
-        dd('delete');
+    public function destroy($id){
+        $ret = $this->adminUser->delete($id);
+        return redirect('/Kawhi/user');
+    }
+    public function form(){
+        $id = $this->request->get('id',false);
+        $validate = [
+            'name'=>'required|max:64',
+            //'email'=>'required|email|unique:admin_users,email',
+            //'password'=>'required|min:6',
+        ];
+        if ($id!=false) {
+            $validate['email']    = 'required|email|unique:admin_users,email,'.$id; // email
+        }else{
+            $validate['email']    = 'required|email|unique:admin_users,email'; // email
+            $validate['password'] = 'required|min:6';
+        }
+        $this->validate($this->request,$validate,[
+            'name.required'  => '昵称不可为空',
+            'name.max'  => '昵称超过最大长度限制',
+            'email.required' => 'E-mail 不可为空',
+            'email.email'    => 'E-mail 格式不正确',
+            'email.unique'   => 'E-mail 已使用，请更换',
+            'password.min'   => '密码长度最少为 6 位',
+            'password.required' => '密码 不可为空',
+        ]);
+        return $this->request->all(['name','password','email']);
+    }
+    
+    public function setStatus($id){
+        
     }
 
 }

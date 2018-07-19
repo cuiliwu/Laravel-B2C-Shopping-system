@@ -54,7 +54,8 @@ class AuthController extends  BaseController
                 'name'=>$doLogin['name'],
                 'email'=>$doLogin['email'],
                 'created_at'=>$doLogin['created_at'],
-                'admin_user_id'=>$doLogin['id'],
+                'is_super'=>$doLogin['is_super'],
+                'admin_user_id'=>$doLogin['user_id'],
             ]);
             return redirect()->to('/Kawhi');
         }else{

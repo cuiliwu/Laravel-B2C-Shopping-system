@@ -421,7 +421,7 @@
                 </div>
                 <div class="footer">
                     <div class="pull-right">
-                        10GB of <strong>250GB</strong> Free.
+                        10GB of <strong>250GB2</strong> Free.
                     </div>
                     <div>
                         <strong>Copyright</strong> Example Company &copy; 2014-2015
@@ -940,7 +940,7 @@
                 showMethod: 'slideDown',
                 timeOut: 4000
             };
-            toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+            toastr.success('Responsive Admin Theme', 'Welcome to BCSHOP+');
 
         }, 1300);
 

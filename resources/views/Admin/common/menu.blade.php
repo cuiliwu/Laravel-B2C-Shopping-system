@@ -4,20 +4,24 @@
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <span>
-                        <img alt="image" class="img-circle" src="{{asset('img/profile_small.jpg')}}" />
+                        @if(session('is_super')==1)
+                        <img alt="image" class="img-circle" height="80" src="{{asset('img/a9.jpg')}}" />
+                        @else
+                        <img alt="image" class="img-circle" height="80" src="{{asset('img/a7.jpg')}}" />
+                        @endif
                     </span>
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="{{asset('Kawhi/')}}">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold">David Williams</strong>
+                                <strong class="font-bold">{{session('name')}}</strong>
                             </span>
                             <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
                         </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">{{session('email')}}</a></li>
                         <li class="divider"></li>
                         <li><a href="{{asset('/Kawhi/logout')}}">Logout</a></li>
                     </ul>

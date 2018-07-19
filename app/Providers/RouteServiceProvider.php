@@ -16,6 +16,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
     
+    protected $WebNameSpace = 'App\Http\Controllers\Web';
     protected $AdminNameSpace = 'App\Http\Controllers\Admin';
 
     /**
@@ -56,7 +57,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
+             ->namespace($this->WebNameSpace)
              ->group(base_path('routes/web.php'));
     }
 
