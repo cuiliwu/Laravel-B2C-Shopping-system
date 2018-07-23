@@ -34,6 +34,12 @@ Route::group(['middleware' =>  ['adminAuthenticate']], function () {
     Route::group(['namespace' =>  'User'], function () {
         // 后台用户管理
         Route::resource('user','UserController');
+        // 角色
+        Route::resource('role','RoleController');
+        // 权限
+        Route::resource('permission','PermissionController');
+        // 菜单
+        Route::resource('menu','MenuController');
     });
 
     Route::group(['namespace' =>  'Product','prefix'=>'product'], function () {

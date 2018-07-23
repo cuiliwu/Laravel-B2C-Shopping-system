@@ -2,7 +2,7 @@
 /**
  * Created by Engineer CuiLiwu.
  * Project: deal.
- * Date: 2018/6/6-9:10
+ * Date: 2018/7/23-10:13
  * License Hangzhou orce Technology Co., Ltd. Copyright © 2018
  */
 
@@ -11,7 +11,7 @@ namespace App\Http\Controllers\Admin\Product;
 use App\Http\Controllers\Admin\BaseController;
 use Illuminate\Http\Request;
 
-class CategoryController extends  BaseController
+class SpecController  extends  BaseController
 {
     protected $request;
 
@@ -20,9 +20,9 @@ class CategoryController extends  BaseController
         $this->request = $request;
     }
     /**
-     * 分类列表
+     * 规格列表
      * */
     public function index(){
-        return view('Admin.Category.category');
+        return view('Admin.Spec.spec');
     }
 }

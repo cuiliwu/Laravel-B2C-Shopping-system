@@ -39,6 +39,15 @@
                             <li>
                                 <a href="{{asset('/Kawhi/user')}}" class="third-label">用户列表</a>
                             </li>
+                            <li>
+                                <a href="{{asset('/Kawhi/role')}}" class="third-label">角色列表</a>
+                            </li>
+                            <li>
+                                <a href="{{asset('/Kawhi/permission')}}" class="third-label">权限列表</a>
+                            </li>
+                            <li>
+                                <a href="{{asset('/Kawhi/menu')}}" class="third-label">菜单列表</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

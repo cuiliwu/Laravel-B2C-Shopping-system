@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>BLOG</title>
     @yield('head')

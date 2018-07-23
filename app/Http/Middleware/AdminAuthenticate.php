@@ -23,6 +23,10 @@ class AdminAuthenticate
     {
         if(!session('admin_user_id')){
             return redirect()->to(route('admin.login'));
+        }elseif(session('is_super')==1){
+            $user_id = session('admin_user_id');
+            $route_index = $request->route()->action['as'];
+
         }
         return $next($request);
     }
