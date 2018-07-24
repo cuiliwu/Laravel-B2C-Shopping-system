@@ -28,7 +28,7 @@ Route::group([],function () {
 
 
 Route::group(['middleware' =>  ['adminAuthenticate']], function () {
-    Route::get('/','AdminIndexController@index','admin.index');
+    Route::get('/',['uses'=>'AdminIndexController@index','as'=>'admin.index']);
 
     // 用户管理
     Route::group(['namespace' =>  'User'], function () {

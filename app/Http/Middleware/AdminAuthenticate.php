@@ -28,6 +28,19 @@ class AdminAuthenticate
             $route_index = $request->route()->action['as'];
 
         }
+        //dd(self::getRouteList());
         return $next($request);
+    }
+    public function getRouteList()
+    {
+        $app = app();
+        $path = [];
+        $routes = $app->routes->getRoutes();
+        foreach ($routes as $k => $value){
+            $path[$k]['uri']    = $value->uri;
+            $path[$k]['path']   = $value->methods[0];
+            $path[$k]['action'] = $value->action;
+        }
+        return $routes;
     }
 }
