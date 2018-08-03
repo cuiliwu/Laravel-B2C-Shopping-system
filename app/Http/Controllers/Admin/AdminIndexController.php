@@ -23,7 +23,7 @@ class AdminIndexController extends  BaseController
      * 后台-文章分类列表
      * */
     public function index(){
-        return view('Admin.index',['bread'=>['first_level'=>'首页','second_level'=>'']]);
+        return view('Admin.welcome',['bread'=>['first_level'=>'首页','second_level'=>'']]);
     }
     /**
      * 后台-新增页面
